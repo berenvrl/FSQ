@@ -1,0 +1,260 @@
+/* Call to Action Button */
+.cta-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem $default-font-size;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  }
+}
+
+.little-label {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #00cdac;
+  color: #fff;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: inherit;
+  font-weight: bold;
+}
+.fe {
+  background-color: #fba06c;
+}
+.be {
+  background-color: #adadff;
+}
+.pp {
+  background-color: #00ffd6;
+}
+.cp {
+  background-color: #52bdff;
+}
+.ut {
+  background-color: #52ff61;
+}
+.it {
+  background-color: #6f52ff;
+}
+.ee {
+  background-color: #d452ff;
+}
+
+/* Hero Style */
+.cta-btn--hero {
+  @include supportColorForIE11();
+  border-width: 2px;
+  border-style: solid;
+  -moz-border-image: -moz-linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  -webkit-border-image: -webkit-linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  border-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  -webkit-border-image-slice: 1;
+  border-image-slice: 1;
+  @include supportIE11() {
+    color: $secondary-color !important;
+    &:hover {
+      color: $white-color !important;
+    }
+  }
+
+  @include respond(phone) {
+    background-image: none;
+    border: 2px solid $secondary-color;
+    -webkit-text-fill-color: $secondary-color;
+  }
+
+  &::after {
+    background-image: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+
+    @include respond(phone) {
+      background-image: none;
+    }
+  }
+
+  &:hover {
+    -webkit-text-fill-color: $white-color;
+    text-decoration: none;
+
+    @include respond(phone) {
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.cta-btn--hero-first{
+  @include supportColorForIE11();
+  border-width: 2px;
+  border-style: solid;
+  -moz-border-image: -moz-linear-gradient(
+    135deg,
+    $third-color 0%,
+    $secondary-color 100%
+  );
+  -webkit-border-image: -webkit-linear-gradient(
+    135deg,
+    $third-color 0%,
+    $secondary-color 100%
+  );
+  border-image: linear-gradient(
+    135deg,
+    $third-color 0%,
+    $secondary-color 100%
+  );
+  -webkit-border-image-slice: 1;
+  border-image-slice: 1;
+  @include supportIE11() {
+    color: $secondary-color !important;
+    &:hover {
+      color: $white-color !important;
+    }
+  }
+
+  @include respond(phone) {
+    background-image: none;
+    border: 2px solid $secondary-color;
+    -webkit-text-fill-color: $secondary-color;
+  }
+
+  &::after {
+    background-image: linear-gradient(
+      135deg,
+      $third-color 0%,
+      $secondary-color 100%
+    );
+
+    @include respond(phone) {
+      background-image: none;
+    }
+  }
+
+  &:hover {
+    -webkit-text-fill-color: $white-color;
+    text-decoration: none;
+
+    @include respond(phone) {
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+
+.cta-btn--hero-second{
+  @include supportColorForIE11();
+  border-width: 2px;
+  border-style: solid;
+  -moz-border-image: -moz-linear-gradient(
+    135deg,
+    $fourth-color 0%,
+    $secondary-color 100%
+  );
+  -webkit-border-image: -webkit-linear-gradient(
+    135deg,
+    $fourth-color 0%,
+    $secondary-color 100%
+  );
+  border-image: linear-gradient(
+    135deg,
+    $fourth-color 0%,
+    $secondary-color 100%
+  );
+  -webkit-border-image-slice: 1;
+  border-image-slice: 1;
+  @include supportIE11() {
+    color: $secondary-color !important;
+    &:hover {
+      color: $white-color !important;
+    }
+  }
+
+  @include respond(phone) {
+    background-image: none;
+    border: 2px solid $secondary-color;
+    -webkit-text-fill-color: $secondary-color;
+  }
+
+  &::after {
+    background-image: linear-gradient(
+      135deg,
+      $fourth-color 0%,
+      $secondary-color 100%
+    );
+
+    @include respond(phone) {
+      background-image: none;
+    }
+  }
+
+  &:hover {
+    -webkit-text-fill-color: $white-color;
+    text-decoration: none;
+
+    @include respond(phone) {
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Resume Style */
+.cta-btn--resume {
+  color: $white-color;
+  border: 2px solid $white-color;
+
+  &::after {
+    background: $white-color;
+  }
+
+  &:hover {
+    color: $secondary-color;
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Arrow Button */
+.up i {
+  color: #272727;
+}

@@ -1,0 +1,330 @@
+#projects {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  margin-top: -10rem;
+  padding-top: 15rem;
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+
+  .project-wrapper {
+    margin-bottom: 15rem;
+
+    @include respond(phone) {
+      margin-bottom: 0rem;
+    }
+
+    .row {
+      margin-bottom: 8rem;
+
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__text {
+      text-align: left;
+
+      @include respond(phone) {
+        margin-bottom: 2.5rem !important;
+      }
+      @include respond(tab-land) {
+        margin-bottom: 4.8rem;
+      }
+
+      &-title {
+        font-weight: bold;
+        margin-bottom: 1.8rem;
+        font-size: $mid-font-size;
+
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+
+      & p > a {
+        color: $secondary-color;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0 auto;
+
+      @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+      }
+
+      & .thumbnail {
+        border: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transition: all 0.2s ease-out;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+          0.5s box-shadow,
+          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+        @include respond(phone) {
+          border: 1px solid $light-grey;
+          box-shadow: none;
+          margin-bottom: 3.2rem;
+        }
+      }
+    }
+  }
+}
+
+
+#blogs {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  padding: 8rem 0;
+
+  .row {
+    gap: 2rem; // kartlar arası boşluk
+  }
+
+  .project-card {
+    height: 320px; // tüm kartlar aynı yükseklikte
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      height: 160px; // tüm görseller eşit yüksekliğe sahip
+      object-fit: cover; // kırpma ile hizalama
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .card-body {
+      padding: 0.8rem 1rem;
+
+      .card-text {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .card-title {
+    display: block;
+    font-size: 1.5rem; // başlık boyutu
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center; // ortalamak için, istersen sola da yaslayabilirsin
+  }
+
+  @include respond(phone) {
+    padding: 4rem 1rem;
+
+    .project-card {
+      height: auto; // mobilde yüksekliği esnek yap
+      img {
+        height: 120px;
+      }
+    }
+    .card-title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+#events {
+  padding: 8rem 0;
+  background-color: #f9f9f9;
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .row {
+    display:flex;
+    flex-wrap:wrap;
+    gap: 0.5rem;
+    align-items: stretch;
+    justify-content:flex-start;
+  }
+
+  .event-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius:2px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 240px;
+    margin:0 auto;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .event-img-wrapper {
+      position: relative;
+
+      .event-img {
+        width: 100%;
+        height: 180px; // tüm görseller eşit yüksekliğe sahip
+        object-fit: cover;
+      }
+
+      .event-date {
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        background-color: rgba(3, 120, 124, 0.85); // primary-color
+        color: #fff;
+        padding: 0.3rem 0.6rem;
+        border-radius: 6px;
+        font-size: 1.8rem;
+         font-weight: 600;
+      }
+    }
+
+    .event-content {
+      flex-grow:1;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+
+
+      .event-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .event-description {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+
+      .event-link {
+        color: #fff;
+        background: #03787c;
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          background: #055a61;
+        }
+      }
+    }
+  }
+
+  /* Responsive */
+  @include respond(phone) {
+    .event-card {
+      .event-img-wrapper {
+        .event-img {
+          height: 120px;
+        }
+        .event-date {
+          font-size: 0.8rem;
+          padding: 0.2rem 0.4rem;
+        }
+      }
+
+      .event-content {
+        padding: 0.8rem 1rem;
+
+        .event-title {
+          font-size: 1.3rem;
+        }
+
+        .event-description {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}
+
+#news {
+  background-color: $primary-color;
+  color: $white-color;
+  margin-top: -10rem;
+  padding-top: 15rem;
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+
+  .project-wrapper {
+    margin-bottom: 15rem;
+
+    @include respond(phone) {
+      margin-bottom: 0rem;
+    }
+
+    .row {
+      margin-bottom: 8rem;
+
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__text {
+      text-align: left;
+
+      @include respond(phone) {
+        margin-bottom: 2.5rem !important;
+      }
+      @include respond(tab-land) {
+        margin-bottom: 4.8rem;
+      }
+
+      &-title {
+        font-weight: bold;
+        margin-bottom: 1.8rem;
+        font-size: $mid-font-size;
+
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+
+      & p > a {
+        color: $secondary-color;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0 auto;
+
+      @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+      }
+
+
+    }
+  }
+}
