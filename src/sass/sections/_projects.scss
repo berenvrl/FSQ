@@ -51,7 +51,7 @@
 
     &__image {
       width: 90%;
-      margin: 0 auto;
+      margin: 2rem auto;
 
       @include respond(tab-land) {
         width: 100%;
@@ -317,7 +317,7 @@
 
     &__image {
       width: 90%;
-      margin: 0 auto;
+      margin: 2rem auto;
 
       @include respond(tab-land) {
         width: 100%;
@@ -327,4 +327,11 @@
 
     }
   }
+}
+
+#certifications .carousel-item img{
+   @include respond(phone) {
+      max-height: 100%;
+      width: auto;
+    }
 }

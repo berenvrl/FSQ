@@ -1,3 +1,4 @@
+
 #hero {
   min-height: 100vh;
   height: auto;
@@ -25,7 +26,7 @@
   background-size: cover; */
 
   @include respond(phone) {
-    padding: 0 1.5rem $default-font-size;
+    padding: 0rem 1.5rem;
   }
 
   .hero-title {
@@ -52,22 +53,31 @@
 
   .hero-title .subtitle {
     display: block;       /* Yeni satır gibi davranması için */
-    font-size: 1.6rem;      /* İstediğin font size */
-    margin-top: 1rem;
+    font-size: 3.5rem;      /* İstediğin font size */
+    margin-top: 2rem;
   }
 
   .hero-cta {
   display: block;
-  text-align: center; 
+  text-align: left; 
+
+  & a {
+      font-size: 2.4rem;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
 
   & .cta-btn {
     display:block;
     max-width: max-content;
-    margin-bottom: 1rem auto;
-    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 
     @include respond(phone) {
-      font-size: 2rem;
+      font-size: 1.6rem;
+      margin-top:1rem;
     }
   }
 
