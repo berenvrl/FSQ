@@ -61,6 +61,14 @@
           text-align: center;
         }
 
+        @include respond(phone) {
+          display: inline;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            font-size: 1.3rem;
+        }
+
         &--important {
           background: darken($secondary-color, 1%);
           display: inline-block;

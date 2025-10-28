@@ -53,8 +53,27 @@
 
   .hero-title .subtitle {
     display: block;       /* Yeni satır gibi davranması için */
-    font-size: 3.5rem;      /* İstediğin font size */
+    font-size: 3rem;      /* İstediğin font size */
     margin-top: 2rem;
+
+     @include respond(phone) {
+      font-size: 2.3rem;
+      line-height: 1.4;
+    }
+  }
+
+  .hero-title .subtitle2 {
+    display: block;       /* Yeni satır gibi davranması için */
+    font-size: 2rem;      /* İstediğin font size */
+    margin-top: 1.3rem;
+    color: gray;
+    font-style: italic;
+    font-weight: 400;
+
+      @include respond(phone) {
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
   }
 
   .hero-cta {
