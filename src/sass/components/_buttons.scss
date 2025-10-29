@@ -30,6 +30,11 @@
   margin-right: 5px;
   font-size: inherit;
   font-weight: bold;
+
+  @include respond(phone){
+    font-size: .8rem;
+    padding: 1px 3px;
+  }
 }
 .fe {
   background-color: #9457EB;
@@ -137,6 +142,7 @@
   );
   -webkit-border-image-slice: 1;
   border-image-slice: 1;
+
   @include supportIE11() {
     color: $secondary-color !important;
     &:hover {
@@ -148,6 +154,7 @@
     background-image: none;
     border: 2px solid $white-color;
     -webkit-text-fill-color: $white-color;
+    font-size: 1rem;
   }
 
   &::after {
@@ -269,7 +276,9 @@
   @include respond(phone) {
     background-image: none;
     border: 2px solid $white-color;
-    -webkit-text-fill-color: $white-color;
+    -webkit-text-fill-color: $secondary-color;
+    font-size: 1.2rem;
+  
   }
 
   &::after {

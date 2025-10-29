@@ -29,7 +29,12 @@
 
       @include respond(phone) {
         margin-bottom: 2.5rem !important;
+
+        p,u,li{
+          font-size: 1.3rem;
+        }
       }
+
       @include respond(tab-land) {
         margin-bottom: 4.8rem;
       }
@@ -90,7 +95,7 @@
   .cardwrap{
 
     @include respond(phone){
-      gap:1.1rem;
+      gap:2rem;
     }
   }
 
@@ -109,7 +114,7 @@
     // }
 
     @include respond(phone){
-      width: 90%;
+      width: 70%;
       margin: 0 auto;
     }
 
@@ -135,12 +140,14 @@
 
   .card-title {
     display: block;
-    font-size: 1.5rem; // başlık boyutu
     font-weight: 600;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center; // ortalamak için, istersen sola da yaslayabilirsin
 
     @include respond(phone){
+    
+      margin-bottom: 0;
       font-size: 1.2rem;
     }
   }
@@ -303,6 +310,13 @@
   .project-wrapper1 {
     margin-bottom: 15rem;
 
+    p{
+      @include respond(phone){
+        font-size: 1rem;
+      }
+      
+    }
+
     @include respond(phone) {
       margin-bottom: 0rem;
     }
@@ -325,14 +339,24 @@
         margin-bottom: 4.8rem;
       }
 
+      div> p{
+
+        @include respond(phone){
+          font-size: 1.1rem;
+        }
+      
+      }
+
+
       &-title {
         font-weight: bold;
         margin-bottom: 1.8rem;
         font-size: $mid-font-size;
 
         @include respond(phone) {
-          font-size: 1.6rem;
+          font-size: 1.3rem;
         }
+
       }
 
       & span > a {
@@ -353,54 +377,131 @@
        
       }
       
-
-      img{
-        @include respond(phone){
-          height: 40%;
-          width: auto;
-        }
-      }
     }
 
     &__image {
       width: 90%;
       margin: 2rem auto;
+      text-align: left;
+
+      img{
+        width: 100%;
+        height:350px ;
+        object-fit: cover;
+        border-radius: 10px;
+
+        @include respond(phone){
+          height: 250px;
+          width: 80%;
+        }
+
+        @include respond(phone){
+          width: 70%;
+          height: 150px;
+          margin: 0 auto;
+          display: block;
+          object-fit: contain;
+        }
+      }
 
       @include respond(tab-land) {
         width: 100%;
         margin: 0;
       }
       @include respond(phone){
-        margin-top: 2rem;
+        text-align: center;
       }
 
 
     }
+
+     .source-text{
+
+          font-size: 1.6rem;
+
+          @include respond(phone){
+            font-size: 1rem;
+            text-align: center;
+          }
+          a{
+            font-size: 1.5rem;
+            @include respond(phone){
+              font-size: 1rem;
+
+            }
+          }
+      }
   }
 }
 
 #certifications{
-  .carousel-item{
-     @include respond(phone) {
-      height: auto;  
 
-    }
+  min-height: 100vh;
+
+  @include respond(phone){
+    min-height: auto;
+
+  }
+
+  .carousel-inner{
+  
+  @include respond(phone){
+    height: 250px;
+  }
+  } 
+
+  .carousel-item{
+    height: 400px;
 
     img{
-      @include respond(phone){
-        width: auto;
-        height: 100%;
-        
+      width: 80%;
+      max-height: 100%;
+      height: auto;
+    }
+    @include respond(phone){
+      height: 50px;
+      img{
+        width: 100%;
       }
-
+      div{
+        font-size: 1.3rem !important;
+        padding: 3px 8px !important;
+      }
     }
   }
+
+  // .carousel-item{
+  //    @include respond(phone) {
+  //     height: auto;  
+
+  //   }
+
+  //   img{
+  //     @include respond(phone){
+  //       width: auto;
+  //       height: 100%;
+        
+  //     }
+
+  //   }
+  // }
   
 }
 
 #quality-projects{
   .project-wrapper{
     &__text{
+
+       @include respond(phone) {
+        margin-bottom: 2.5rem !important;
+
+        p,u,li{
+          font-size: 1.3rem;
+        }
+      }
+
+
+
       &-title{
         @include respond(phone){
           font-size: 1.6rem;

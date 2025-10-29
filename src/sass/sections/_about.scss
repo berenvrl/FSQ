@@ -43,9 +43,18 @@
         padding-bottom: 6.4rem;
       }
       @include respond(phone){
-        height: auto;
+        width: 100%;
         padding-bottom: 0.5rem;
+        justify-content: center;
+        align-items: center;
+
+        img{
+          width: 200px;
+          height: auto;
+          display: block;
+        }
       }
+
     }
 
     &__info {
