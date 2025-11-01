@@ -310,7 +310,7 @@
   .project-wrapper1 {
     margin-bottom: 15rem;
 
-    p{
+    p {
       @include respond(phone){
         font-size: 1rem;
       }
@@ -331,6 +331,15 @@
 
     &__text {
       text-align: left;
+
+      ul li{
+        font-size: 1.5rem;
+
+        @include respond(phone){
+          font-size: 1rem;
+        }
+
+      }
 
       @include respond(phone) {
         margin-bottom: 2.5rem !important;
